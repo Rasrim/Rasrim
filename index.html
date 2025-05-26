@@ -129,10 +129,10 @@
     .slider:before {
       position: absolute;
       content: "";
-      height: var(--size-of-icon);
-      width: var(--size-of-icon);
+      height: var(--size-of-icon,1.4em);
+      width: var(--size-of-icon,1.4em);
       border-radius: 20px;
-      left: var(--slider-offset);
+      left: var(--slider-offset,0.3em);
       top: 50%;
       transform: translateY(-50%);
       background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
@@ -144,42 +144,28 @@
     }
 
     input:checked + .slider:before {
-      left: calc(100% - (var(--size-of-icon) + var(--slider-offset)));
+      left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
       background: #303136;
       box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
     }
 
+    /* Social Media Styles */
     .social-links {
       margin-top: 2em;
       display: flex;
+      gap: 1.2em;
       justify-content: center;
-      gap: 1em;
-      flex-wrap: wrap;
+      font-size: 2em;
+      animation: fadeIn 2s ease;
     }
 
     .social-links a {
-      display: inline-block;
-      background-color: #eee;
-      color: #000;
-      padding: 0.8em;
-      border-radius: 50%;
       text-decoration: none;
-      font-size: 1.4em;
-      transition: transform 0.3s ease, background-color 0.3s;
+      transition: transform 0.3s ease;
     }
 
     .social-links a:hover {
       transform: scale(1.2);
-      background-color: #ccc;
-    }
-
-    body.dark .social-links a {
-      background-color: #333;
-      color: white;
-    }
-
-    body.dark .social-links a:hover {
-      background-color: #555;
     }
   </style>
 </head>
@@ -211,7 +197,7 @@
       <a href="https://www.instagram.com/warrior_don07?fbclid=IwZXh0bgNhZW0CMTAAYnJpZBExNVRiMkpTZHpJd3ZpTzJFSAEeNp1nzlfrtV-AjQfWr2ufecuMhI3WeP9yMlSLCc9cBtPUOR2Oqlj_LEcYcC8_aem_LfWWMBHe-mUTqkDOD7sH4Q" target="_blank" title="Instagram">📸</a>
       <a href="https://www.facebook.com/rashrim.sigdel.2025/" target="_blank" title="Facebook">📘</a>
       <a href="http://www.youtube.com/@rasrimsigdel" target="_blank" title="YouTube">▶️</a>
-      <a href="https://www.linkedin.com/in/rasrimsigdel" target="_blank" title="LinkedIn">💼</a>
+      <a href="https://www.linkedin.com/in/rasrim-sigdel-2333522b5/" target="_blank" title="LinkedIn">💼</a>
     </div>
   </div>
 
