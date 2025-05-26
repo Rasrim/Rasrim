@@ -129,10 +129,10 @@
     .slider:before {
       position: absolute;
       content: "";
-      height: var(--size-of-icon,1.4em);
-      width: var(--size-of-icon,1.4em);
+      height: var(--size-of-icon);
+      width: var(--size-of-icon);
       border-radius: 20px;
-      left: var(--slider-offset,0.3em);
+      left: var(--slider-offset);
       top: 50%;
       transform: translateY(-50%);
       background: linear-gradient(40deg,#ff0080,#ff8c00 70%);
@@ -144,9 +144,42 @@
     }
 
     input:checked + .slider:before {
-      left: calc(100% - (var(--size-of-icon,1.4em) + var(--slider-offset,0.3em)));
+      left: calc(100% - (var(--size-of-icon) + var(--slider-offset)));
       background: #303136;
       box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+    }
+
+    .social-links {
+      margin-top: 2em;
+      display: flex;
+      justify-content: center;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+
+    .social-links a {
+      display: inline-block;
+      background-color: #eee;
+      color: #000;
+      padding: 0.8em;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 1.4em;
+      transition: transform 0.3s ease, background-color 0.3s;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.2);
+      background-color: #ccc;
+    }
+
+    body.dark .social-links a {
+      background-color: #333;
+      color: white;
+    }
+
+    body.dark .social-links a:hover {
+      background-color: #555;
     }
   </style>
 </head>
@@ -168,10 +201,19 @@
     <p>
       Hello! I'm a passionate student currently studying BSc (Hons) Computing. I love building digital solutions and exploring new technologies. I'm interested in web development, software engineering, and all things tech.
       <br><br>
-      📧 Email: sigdelras47@gmail.com<br>
+      📧 Email: <a href="mailto:sigdelras47@gmail.com">sigdelras47@gmail.com</a><br>
       📍 Location: Kathmandu, Nepal<br>
       🎯 Interests: Coding, Reading, Design, AI
     </p>
+
+    <!-- Social Media Links -->
+    <div class="social-links">
+      <a href="https://www.instagram.com/yourusername" target="_blank" title="Instagram">📸</a>
+      <a href="https://www.facebook.com/yourusername" target="_blank" title="Facebook">📘</a>
+      <a href="https://www.youtube.com/@yourchannel" target="_blank" title="YouTube">▶️</a>
+      <a href="https://www.linkedin.com/in/yourusername" target="_blank" title="LinkedIn">💼</a>
+      <a href="mailto:sigdelras47@gmail.com" title="Send Email">✉️</a>
+    </div>
   </div>
 
   <!-- Toggle Logic -->
